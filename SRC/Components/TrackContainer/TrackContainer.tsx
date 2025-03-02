@@ -11,9 +11,9 @@ function TrackContainer(): React.JSX.Element {
   return (
     <View style={styles.container}>
       <IDText value={Strings.finish_to_stay_calmer} style={styles.text} />
-      <ProgressBar />
+      <ProgressBar progress={20} />
       <View style={styles.subContainer}>
-        <Image source={IconFire} style={styles.icon} />
+        <Image testID="fire-icon" source={IconFire} style={styles.icon} />
         <IDText
           value={Strings.people_doing_session}
           style={styles.sessionText}

@@ -63,10 +63,8 @@ function DailyScreen(): React.JSX.Element {
         ))}
         <View style={styles.bottomContainer}>
           <View style={styles.divider} />
-          <IDText
-            value={`"${Strings.i_advise}"\n${Strings.linda_rinn}`}
-            style={styles.adviseText}
-          />
+          <IDText value={`"${Strings.i_advise}"`} style={styles.adviseText} />
+          <IDText value={`${Strings.linda_rinn}`} style={styles.adviseText} />
         </View>
       </View>
     </ScrollView>

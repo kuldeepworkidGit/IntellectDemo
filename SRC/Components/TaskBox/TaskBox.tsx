@@ -22,12 +22,18 @@ interface TitleContainerProps {
   title: string;
   icon: ImageSourcePropType;
   style?: ViewStyle;
+  testID?: string;
 }
 function TaskBox(props: TaskBoxProps): React.JSX.Element {
   const {title, desc, style, ...rest} = props;
   return (
-    <Pressable style={[styles.container, style]} {...rest}>
-      <Image source={IconPlay} style={styles.icon} tintColor={Color.green} />
+    <Pressable testID="task-box" style={[styles.container, style]} {...rest}>
+      <Image
+        testID="task-box-icon"
+        source={IconPlay}
+        style={styles.icon}
+        tintColor={Color.green}
+      />
       <View style={styles.textContainer}>
         <IDText value={title} />
         <IDText value={desc} style={styles.desc} />
@@ -41,7 +47,11 @@ export const TitleContainer = (props: TitleContainerProps) => {
 
   return (
     <View style={[styles.titleContainer, style]} {...rest}>
-      <Image source={icon} style={styles.titleContainerIcon} />
+      <Image
+        testID="title-container-icon"
+        source={icon}
+        style={styles.titleContainerIcon}
+      />
       <IDText value={title} />
     </View>
   );

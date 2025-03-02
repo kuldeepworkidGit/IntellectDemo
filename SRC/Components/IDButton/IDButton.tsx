@@ -18,8 +18,9 @@ export function IDButton(props: RAButtonProps): React.JSX.Element {
   const {title, style, ...rest} = props;
 
   return (
-    <Pressable style={[styles.container, style]} {...rest}>
+    <Pressable testID="id-button" style={[styles.container, style]} {...rest}>
       <Image
+       testID="id-button-icon"
         source={IconNotification}
         style={styles.icon}
         tintColor={Color.white}

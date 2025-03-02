@@ -5,7 +5,7 @@ import Color from '../../Utils/Color';
 import Strings from '../../Utils/Strings';
 import IDText from '../IDText/IDText';
 import {Spacing} from '../../Utils/Topology';
-import { IDButton } from '../IDButton';
+import {IDButton} from '../IDButton';
 
 function MorningComp(): React.JSX.Element {
   return (
@@ -17,7 +17,12 @@ function MorningComp(): React.JSX.Element {
         <IDButton title={Strings.set_reminder} style={styles.button} />
       </View>
 
-      <Image source={ImgIdea} style={styles.img} tintColor={Color.white} />
+      <Image
+        testID="morning-comp-image"
+        source={ImgIdea}
+        style={styles.img}
+        tintColor={Color.white}
+      />
     </View>
   );
 }

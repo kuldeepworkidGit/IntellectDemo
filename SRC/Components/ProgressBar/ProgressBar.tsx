@@ -4,11 +4,16 @@ import Color from '../../Utils/Color';
 
 interface ProgressBarProps {
   progress?: number;
+  testID?: string;
 }
 function ProgressBar({progress = 10}: ProgressBarProps): React.JSX.Element {
+  progress = progress > 100 ? 100 : progress;
   return (
     <View style={styles.container}>
-      <View style={[styles.subContainer, {width: `${progress}%`}]} />
+      <View
+        testID="progress-bar-fill"
+        style={[styles.subContainer, {width: `${progress}%`}]}
+      />
     </View>
   );
 }
