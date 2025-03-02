@@ -1,8 +1,5 @@
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import HomeScreen from '../Screens/HomeScreen';
-import ProfileScreen from '../Screens/ProfileScreen';
-import ExploreScreen from '../Screens/ExploreScreen';
-import CareScreen from '../Screens/CareScreen';
 import DailyScreen from '../Screens/DailyScreen';
 import {ScreenName} from '../Utils/Constants';
 import {Image, ImageSourcePropType, StyleSheet} from 'react-native';
@@ -46,14 +43,14 @@ function IDBottomTabs(): React.JSX.Element {
       />
       <Tab.Screen
         name={ScreenName.EXPLORE}
-        component={ExploreScreen}
+        component={HomeScreen}
         options={{
           tabBarIcon: ({color}) => Icon(color, IconSearch),
         }}
       />
       <Tab.Screen
         name={ScreenName.CARE}
-        component={CareScreen}
+        component={HomeScreen}
         options={{
           tabBarIcon: ({color, focused}) =>
             Icon(color, focused ? IconGroup : IconGroupFilled),
@@ -69,7 +66,7 @@ function IDBottomTabs(): React.JSX.Element {
       />
       <Tab.Screen
         name={ScreenName.PROFILE}
-        component={ProfileScreen}
+        component={HomeScreen}
         options={{
           tabBarIcon: ({color, focused}) =>
             Icon(color, focused ? IconUserFilled : IconUser),
