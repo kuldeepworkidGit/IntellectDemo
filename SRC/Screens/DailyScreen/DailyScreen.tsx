@@ -25,12 +25,16 @@ function DailyScreen(): React.JSX.Element {
           title={Strings.morning}
           style={styles.titleMarginM}
         />
-        {MORNING_ARRAY.map(item => (
+        {MORNING_ARRAY.map((item, index) => (
           <TaskBox
             key={item.id}
             title={item.title}
             desc={item.description}
-            style={{marginBottom: Spacing.spacing_xl}}
+            style={
+              index === MORNING_ARRAY.length - 1
+                ? {}
+                : {marginBottom: Spacing.spacing_xl}
+            }
           />
         ))}
 
@@ -39,12 +43,16 @@ function DailyScreen(): React.JSX.Element {
           title={Strings.afternoon}
           style={styles.titleMargin}
         />
-        {AFTERNOON_ARRAY.map(item => (
+        {AFTERNOON_ARRAY.map((item, index) => (
           <TaskBox
             key={item.id}
             title={item.title}
             desc={item.description}
-            style={{marginBottom: Spacing.spacing_xl}}
+            style={
+              index === MORNING_ARRAY.length - 1
+                ? {}
+                : {marginBottom: Spacing.spacing_xl}
+            }
           />
         ))}
 
@@ -53,12 +61,16 @@ function DailyScreen(): React.JSX.Element {
           title={Strings.evening}
           style={styles.titleMargin}
         />
-        {EVENING_ARRAY.map(item => (
+        {EVENING_ARRAY.map((item, index) => (
           <TaskBox
             key={item.id}
             title={item.title}
             desc={item.description}
-            style={{marginBottom: Spacing.spacing_xl}}
+            style={
+              index === MORNING_ARRAY.length - 1
+                ? {}
+                : {marginBottom: Spacing.spacing_xl}
+            }
           />
         ))}
         <View style={styles.bottomContainer}>

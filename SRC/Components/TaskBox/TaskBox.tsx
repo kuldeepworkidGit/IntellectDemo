@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
     height: 30,
   },
   textContainer: {marginHorizontal: Spacing.spacing_xl},
-  desc: {fontSize: 13, color: Color.primaryColor},
+  desc: {fontSize: 13, color: Color.primaryColor, marginTop: 5},
   titleContainer: {
     flexDirection: 'row',
     alignItems: 'center',

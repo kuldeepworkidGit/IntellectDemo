@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
   },
   subContainer: {
     paddingHorizontal: Spacing.spacing_xl,
-    paddingVertical: Spacing.spacing_2xl * 2,
+    paddingVertical: 45,
   },
   titleMargin: {
     marginVertical: Spacing.spacing_2xl,
@@ -30,5 +30,6 @@ const styles = StyleSheet.create({
     borderRadius: 99,
   },
   bottomContainer: {alignItems: 'center'},
+  marginBottom: {marginBottom: Spacing.spacing_xl},
 });
 export default styles;

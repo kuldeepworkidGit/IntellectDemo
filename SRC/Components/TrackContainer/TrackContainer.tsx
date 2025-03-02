@@ -25,7 +25,7 @@ function TrackContainer(): React.JSX.Element {
 const styles = StyleSheet.create({
   container: {
     padding: Spacing.spacing_xl,
-    backgroundColor: Color.lightPink,
+    backgroundColor: Color.lightGrey,
   },
   icon: {
     width: 18,
