@@ -4,6 +4,7 @@ import {
   StatusBar,
   StyleSheet,
   useColorScheme,
+  View,
 } from 'react-native';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 import {DefaultTheme, NavigationContainer} from '@react-navigation/native';
@@ -25,7 +26,8 @@ function App(): React.JSX.Element {
   };
 
   return (
-    <SafeAreaView style={[backgroundStyle, styles.container]}>
+    <View style={styles.container}>
+      <SafeAreaView style={backgroundStyle} />
       <StatusBar
         barStyle={isDarkMode ? 'light-content' : 'dark-content'}
         backgroundColor={backgroundStyle.backgroundColor}
@@ -34,12 +36,16 @@ function App(): React.JSX.Element {
       <NavigationContainer theme={navTheme}>
         <IDBottomTabs />
       </NavigationContainer>
-    </SafeAreaView>
+      <SafeAreaView style={styles.bottomSafeArea} />
+    </View>
   );
 }
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+  },
+  bottomSafeArea: {
+    backgroundColor: Color.themeColor,
   },
 });
 
