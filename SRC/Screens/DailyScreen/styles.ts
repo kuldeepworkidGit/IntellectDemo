@@ -31,5 +31,12 @@ const styles = StyleSheet.create({
   },
   bottomContainer: {alignItems: 'center'},
   marginBottom: {marginBottom: Spacing.spacing_xl},
+  quoteText: {
+    fontWeight: '500',
+    color: Color.primaryColor,
+    fontSize: 13,
+    textAlign: 'center',
+    marginHorizontal: 50,
+  },
 });
 export default styles;

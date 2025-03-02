@@ -14,69 +14,62 @@ import {
 import {Spacing} from '../../Utils/Topology';
 import IDText from '../../Components/IDText';
 
+const TASK_SECTIONS = [
+  {
+    title: Strings.morning,
+    icon: ImgSun,
+    data: MORNING_ARRAY,
+    style: styles.titleMarginM,
+  },
+  {
+    title: Strings.afternoon,
+    icon: ImgCup,
+    data: AFTERNOON_ARRAY,
+    style: styles.titleMargin,
+  },
+  {
+    title: Strings.evening,
+    icon: ImgMoon,
+    data: EVENING_ARRAY,
+    style: styles.titleMargin,
+  },
+];
+
+interface Task {
+  id: string;
+  title: string;
+  description: string;
+}
+
+const renderTaskList = (tasks: Task[]): React.ReactNode =>
+  tasks.map((item, index) => (
+    <TaskBox
+      key={item.id}
+      title={item.title}
+      desc={item.description}
+      style={
+        index !== tasks.length - 1 ? {marginBottom: Spacing.spacing_xl} : {}
+      }
+    />
+  ));
+
 function DailyScreen(): React.JSX.Element {
   return (
     <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
       <MorningComp />
       <TrackContainer />
       <View style={styles.subContainer}>
-        <TitleContainer
-          icon={ImgSun}
-          title={Strings.morning}
-          style={styles.titleMarginM}
-        />
-        {MORNING_ARRAY.map((item, index) => (
-          <TaskBox
-            key={item.id}
-            title={item.title}
-            desc={item.description}
-            style={
-              index === MORNING_ARRAY.length - 1
-                ? {}
-                : {marginBottom: Spacing.spacing_xl}
-            }
-          />
+        {TASK_SECTIONS.map(({title, icon, data, style}) => (
+          <View key={title}>
+            <TitleContainer icon={icon} title={title} style={style} />
+            {renderTaskList(data)}
+          </View>
         ))}
 
-        <TitleContainer
-          icon={ImgCup}
-          title={Strings.afternoon}
-          style={styles.titleMargin}
-        />
-        {AFTERNOON_ARRAY.map((item, index) => (
-          <TaskBox
-            key={item.id}
-            title={item.title}
-            desc={item.description}
-            style={
-              index === MORNING_ARRAY.length - 1
-                ? {}
-                : {marginBottom: Spacing.spacing_xl}
-            }
-          />
-        ))}
-
-        <TitleContainer
-          icon={ImgMoon}
-          title={Strings.evening}
-          style={styles.titleMargin}
-        />
-        {EVENING_ARRAY.map((item, index) => (
-          <TaskBox
-            key={item.id}
-            title={item.title}
-            desc={item.description}
-            style={
-              index === MORNING_ARRAY.length - 1
-                ? {}
-                : {marginBottom: Spacing.spacing_xl}
-            }
-          />
-        ))}
         <View style={styles.bottomContainer}>
           <View style={styles.divider} />
-          <IDText value={`"${Strings.i_advise}"`} style={styles.adviseText} />
-          <IDText value={`${Strings.linda_rinn}`} style={styles.adviseText} />
+          <IDText value={`"${Strings.i_advise}"`} style={styles.quoteText} />
+          <IDText value={Strings.linda_rinn} style={styles.adviseText} />
         </View>
       </View>
     </ScrollView>
