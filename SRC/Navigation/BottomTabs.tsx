@@ -5,7 +5,7 @@ import ExploreScreen from '../Screens/ExploreScreen';
 import CareScreen from '../Screens/CareScreen';
 import DailyScreen from '../Screens/DailyScreen';
 import {ScreenName} from '../Utils/Constants';
-import {ImageSourcePropType} from 'react-native';
+import {Image, ImageSourcePropType, StyleSheet} from 'react-native';
 import {
   IconDiamond,
   IconDiamondFilled,
@@ -17,13 +17,12 @@ import {
   IconUser,
   IconUserFilled,
 } from '../Assets/Icons';
-import BottomTabIcon from '../Components/BottomTabIcon/BottomtabIcon';
 import Color from '../Utils/Color';
 
 const Tab = createBottomTabNavigator();
 
 const Icon = (color: string, iconPath: ImageSourcePropType) => (
-  <BottomTabIcon color={color} iconPath={iconPath} />
+  <Image source={iconPath} style={styles.icon} tintColor={color} />
 );
 
 function IDBottomTabs(): React.JSX.Element {
@@ -79,5 +78,10 @@ function IDBottomTabs(): React.JSX.Element {
     </Tab.Navigator>
   );
 }
-
+const styles = StyleSheet.create({
+  icon: {
+    height: 30,
+    width: 30,
+  },
+});
 export default IDBottomTabs;

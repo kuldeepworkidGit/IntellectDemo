@@ -4,7 +4,7 @@ import {Spacing} from '../../Utils/Topology';
 import IDText from '../IDText/IDText';
 import Strings from '../../Utils/Strings';
 import Color from '../../Utils/Color';
-import {IconNotification} from '../../Assets/Icons';
+import {IconFire} from '../../Assets/Icons';
 import ProgressBar from '../ProgressBar';
 
 function TrackContainer(): React.JSX.Element {
@@ -13,7 +13,7 @@ function TrackContainer(): React.JSX.Element {
       <IDText value={Strings.finish_to_stay_calmer} style={styles.text} />
       <ProgressBar />
       <View style={styles.subContainer}>
-        <Image source={IconNotification} style={styles.icon} />
+        <Image source={IconFire} style={styles.icon} />
         <IDText
           value={Strings.people_doing_session}
           style={styles.sessionText}

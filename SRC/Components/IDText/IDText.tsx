@@ -3,7 +3,7 @@ import {StyleSheet, Text, TextProps, TextStyle} from 'react-native';
 import Color from '../../Utils/Color';
 
 export interface RATextProps extends TextProps {
-  value: string;
+  value: string | number;
   style?: TextStyle | TextStyle[];
 }
 

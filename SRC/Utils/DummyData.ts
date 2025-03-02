@@ -38,3 +38,9 @@ export const EVENING_ARRAY = [
     description: Strings.silencing_your_inner_critic_desc,
   },
 ];
+
+export const GROWTH_ARRAY = [
+  {id: 'g1', title: Strings.mental_wellbeing, percentage: 20, change: -9},
+  {id: 'g2', title: Strings.work_life_balance, percentage: 50, change: +7},
+  {id: 'g3', title: Strings.self_efficiency, percentage: 80, change: -30},
+];

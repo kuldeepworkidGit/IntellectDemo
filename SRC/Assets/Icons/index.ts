@@ -10,6 +10,7 @@ export const IconUser = require('./user.png');
 export const IconUserFilled = require('./user_filled.png');
 export const IconNotification = require('./bell_filled.png');
 export const IconPlay = require('./play_filled.png');
+export const IconFire = require('./fire.png');
 
 // Images
 export const ImgIdea = require('./idea.png');

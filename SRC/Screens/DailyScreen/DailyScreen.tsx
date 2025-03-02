@@ -16,7 +16,7 @@ import IDText from '../../Components/IDText';
 
 function DailyScreen(): React.JSX.Element {
   return (
-    <ScrollView style={styles.container}>
+    <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
       <MorningComp />
       <TrackContainer />
       <View style={styles.subContainer}>

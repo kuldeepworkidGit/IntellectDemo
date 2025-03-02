@@ -28,4 +28,8 @@ export default {
   silencing_your_inner_critic: 'Silencing Your Inner Critic',
   silencing_your_inner_critic_desc:
     'Challenge the negative, self-doubting voice in your head that undermines your confidence',
+  mental_wellbeing: 'Mental Wellbeing',
+  work_life_balance: 'Work-Life Balance',
+  self_efficiency: 'Self Efficiency',
+  your_area_of_growth: 'Your area of growth are:',
 };
